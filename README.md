@@ -1,7 +1,7 @@
 
 ## Sobre
 
-Criado por Andre L. R. Madureria (2024). 
+Criado por Andre L. R. Madureira (2024). 
 
 Modelo LaTeX para elaboração automática dos documentos necessários para defesa de TCC do IFBA campus Valença.
 
