@@ -1,0 +1,111 @@
+% Copyright 2024, licença GPL3
+% Criado pelo Prof. Andre L. R. Madureira (IFBA -- Campus Valença)
+% 
+% Uso: ajuste as variáveis abaixo para os valores corretos
+% 
+
+\documentclass[11pt]{article}
+
+% useful commands
+\newcommand{\defenseDate}{\rule{2.5cm}{0.4pt}}
+\newcommand{\signDateCartaConvite}{30 de agosto de 2024}
+
+\newcommand{\grau}{Bacharel}
+\newcommand{\course}{Tecnologia em Análise e Desenvolvimento de Sistemas}
+
+\newcommand{\advisor}{NOME DO ORIENTADOR AQUI}
+\newcommand{\instituteAdvisor}{Instituto Federal de Educação, Ciência e Tecnologia - Campus Valença}
+
+\newcommand{\membroBancaUm}{NOME DO MEMBRO UM AQUI}
+\newcommand{\instituteMembroUm}{Instituto Federal de Educação, Ciência e Tecnologia - Campus Valença}
+
+\newcommand{\membroBancaDois}{NOME DO MEMBRO DOIS AQUI}
+\newcommand{\instituteMembroDois}{Instituto Federal de Educação, Ciência e Tecnologia - Campus Valença}
+
+\newcommand{\studentName}{NOME DO DISCENTE AQUI} 
+\newcommand{\tccTitle}{TITULO DO TCC AQUI}
+
+\newcommand{\cartaConviteProf}{}
+\newcommand{\avaliador}{}
+
+% tamanhos customizados
+\newcommand{\sizeA}{1cm}
+\newcommand{\sizeB}{1cm}
+\newcommand{\sizeC}{1cm}
+\newcommand{\sizeD}{1cm}
+
+% Language setting
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype, csquotes}
+
+% Set page size and margins
+\usepackage[a4paper, 
+top=2.75cm, 
+bottom=2.75cm,
+left=2.75cm,
+right=2.75cm,
+marginparwidth=1.75cm]{geometry}
+
+% Para personalizar cabeçalhos e rodapés
+\usepackage{fancyhdr, lastpage}  
+\pagestyle{fancy} % set page style
+\fancyhf{}  % clear header and footer
+\renewcommand{\headrulewidth}{0pt} % hline header
+\renewcommand{\footrulewidth}{0pt} % hline footer
+
+% Useful packages
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx, xcolor, caption}
+\usepackage{multicol, multirow, adjustbox, array}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{enumitem, minibox, placeins}
+
+% adjust spacing between items
+\setlength{\itemsep}{0em} % Space between items
+\setlength{\topsep}{1em} % Space above and below the list
+\setlength{\parsep}{0em} % Space between pars between items
+\setlength{\partopsep}{0em} % topsep+space list start new par
+\setlength{\leftmargini}{2em} % Indent first level items
+
+% inicia documento
+\begin{document}
+
+% ATA DE DEFESA
+\input{documentos/ata_defesa}
+
+% FOLHA DE APROVAÇÃO
+\clearpage
+\input{documentos/folha_aprovacao}
+
+% LISTA DE PRESENÇA
+\clearpage
+\input{documentos/lista_presenca}
+
+% FOLHA DE AVALIAÇÃO - MEMBRO ORIENTADOR
+\clearpage
+\renewcommand{\avaliador}{\advisor}
+\input{documentos/folha_avaliacao}
+
+% FOLHA DE AVALIAÇÃO - MEMBRO UM
+\clearpage
+\renewcommand{\avaliador}{\membroBancaUm}
+\input{documentos/folha_avaliacao}
+
+% FOLHA DE AVALIAÇÃO - MEMBRO DOIS
+\clearpage
+\renewcommand{\avaliador}{\membroBancaDois}
+\input{documentos/folha_avaliacao}
+
+% CARTA CONVITE TCC - MEMBRO UM
+\clearpage
+\renewcommand{\cartaConviteProf}{\membroBancaUm}
+\input{documentos/carta_convite}
+
+% CARTA CONVITE TCC - MEMBRO DOIS
+\clearpage
+\renewcommand{\cartaConviteProf}{\membroBancaDois}
+\input{documentos/carta_convite}
+
+\end{document}
